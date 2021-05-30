@@ -17,8 +17,9 @@ def home_page():
         elif int(info["bias"]) < 10:
             info["color"] = "warning"
         else:
-            info["color"] = "danger"        
-        articles_info.append(info)
+            info["color"] = "danger"   
+        if info["topic"] == "Palestine":      
+            articles_info.append(info)
     return render_template("index.html", articles_info=articles_info)
 
 if __name__ == "__main__":
