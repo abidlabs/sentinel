@@ -1,6 +1,6 @@
 from flask import request, Flask, Response, render_template, jsonify, abort,\
     redirect, url_for, send_file, session, g
-from db import create_table_if_not_exists, update_row, get_all_palestinian_articles, SCHEMA
+from db import create_table_if_not_exists, get_all_palestinian_articles, SCHEMA
 
 app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')
 
